@@ -1,0 +1,14 @@
+services:
+  oracle21c-xe:
+    image: container-registry.oracle.com/database/express:21.3.0-xe
+    container_name: oracle21c-xe
+    ports:
+      - "1521:1521"
+    environment:
+      - ORACLE_PWD=sys
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+      - ./human_resources:/opt/oracle/product/21c/dbhomeXE/demo/schema/human_resources
+
+volumes:
+  oracle_data:
