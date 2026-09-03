@@ -1,13 +1,13 @@
-# DuocUC ORACLE 21c XE Line Up
+# Despliegue de ORACLE 21c XE para DuocUC
 
-El objetivo de este repositorio es facilitar la implementacion de algunas tecnologías requeridas por _Duoc UC_, por medio de una descarga, configuración e instalación automatizada para levantar una base de datos __ORACLE 21c Express Edition (XE)__ necesaria para practicar y aprender en local. Esto debido a que la práctica para algunas evaluaciones se ve limitada al usar __ORACLE Cloud Infraestructure (OCI)__.
+El objetivo de este repositorio es facilitar la implementacion de algunas tecnologías requeridas por _Duoc UC_, por medio de una descarga, configuración e instalación automatizada para desplegar una base de datos __ORACLE 21c Express Edition (XE)__ necesaria para practicar y aprender en local. Es especialmente util para alumnos que no tengan acceso a su cuenta __Oracle Cloud Ifraestructura (OCI)__ y para quienes deseen practicar con las tecnologías de oracle sin depender de conexión a internet.
 
 ---
 
 ## Tecnologías Utilizadas
-*   **Docker / Docker Compose**: Contenedorización del motor para evitar instalaciones nativas complejas.
-*   **Oracle Database 21c XE**: Motor de base de datos relacional (edición oficial gratuita).
-*   **Bash Scripting & SQL*Plus**: Automatización interna para la creación del usuario e inserción de datos.
+*   __Docker / Docker Compose__: Contenedorización del motor para evitar instalaciones nativas complejas.
+*   __Oracle Database 21c XE__: Motor de base de datos relacional (edición oficial gratuita).
+*   __Bash Scripting & SQL*Plus__: Automatización interna para la creación del usuario e inserción de datos __(HR)__.
 
 ---
 
@@ -38,9 +38,8 @@ Para clonar y levantar todo el ambiente académico de manera automatizada, ejecu
 
 ### Paso 1: Clonar y dar permisos al script
 ```bash
-git clone <url-de-tu-repositorio>
+git clone https://github.com/Antonio-Cayulen/Oracle21c-xe-Environment
 cd duocuc-oracle-lineup
-chmod +x init-hr-schema.sh
 ```
 
 ### Paso 2: Levantar el contenedor
@@ -67,4 +66,3 @@ Puedes conectar herramientas externas de modelado (como Oracle SQL Developer, DB
 *   **Host**: `localhost`
 *   **Puerto**: `1521`
 *   **Service Name (Servicio)**: `XEPDB1`
-
